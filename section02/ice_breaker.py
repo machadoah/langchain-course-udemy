@@ -1,6 +1,7 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
+from pydantic import BaseModel, Field
 
 information = """
 Vladimir Vladimirovitch Putin (russo: Влади́мир Влади́мирович Пу́тинⓘ, AFI: [vɫɐˈdʲimʲɪr vɫɐˈdʲimʲɪrəvʲɪtɕ ˈputʲɪn]; Leningrado, 7 de outubro de 1952) é um político russo, ex-advogado e ex-oficial de inteligência que atua como presidente da Rússia desde 2012. Putin ocupou cargos contínuos como presidente ou primeiro-ministro desde 1999: como primeiro-ministro de 1999 a 2000 e de 2008 a 2012, e como presidente de 2000 a 2008. Ele é o líder russo ou soviético que permanece há mais tempo no poder desde Josef Stalin.
@@ -13,6 +14,12 @@ if __name__ == "__main__":
 
     print("Hello, LangChain! 🦜🔗")
 
+    class Output(BaseModel):
+        resume: str = Field(description="A resposta contendo o pequeno resumo.")
+        factories: list[str] = Field(
+            description="A lista contendo os fatos interessantes."
+        )
+
     summary_prompt = """
         Fornecida informações {information} sobre uma pessoa, quero que você crie:
         1. um pequeno resumo
@@ -23,7 +30,9 @@ if __name__ == "__main__":
         input_variables=["information"], template=summary_prompt
     )
 
-    llm = ChatGroq(temperature=0, model="llama3-70b-8192")
+    llm = ChatGroq(temperature=0, model="llama3-70b-8192").with_structured_output(
+        Output
+    )
 
     chain = summary_prompt_template | llm
 
