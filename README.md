@@ -13,8 +13,8 @@ Curso: [LangChain 🦜🔗](https://www.udemy.com/course/langchain)
 
 ## Seções
 
-- [ ] Seção 01: Introduction
-- [ ] Seção 02: The GIST of LangChain - Get started by with your "Hello Word" chain
+- [x] Seção 01: Introduction
+- [x] Seção 02: The GIST of LangChain - Get started by with your "Hello Word" chain
 - [ ] Seção 03: Ice Breaker Real World Generative AI Agent Application
 - [ ] Seção 04: Diving Deep Into ReAct Agents - Whats is the magic?
 - [ ] Seção 05: The GIST of RAG - Embeddings, Vector Databases and more, and Retrieval
