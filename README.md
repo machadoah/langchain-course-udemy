@@ -2,6 +2,15 @@
 
 Curso: [LangChain 🦜🔗](https://www.udemy.com/course/langchain)
 
+## Objetivos
+
+- Desenvolver aplicações com LangChain
+  - Agents
+  - Retrieval Argunments Generation (RAG)
+  - LangChain Ecosystem: LangSmith, LangGraph
+  - Prompt Engineering
+  - Production Ready Applications
+
 ## Seções
 
 - [ ] Seção 01: Introduction
@@ -17,4 +26,5 @@ Curso: [LangChain 🦜🔗](https://www.udemy.com/course/langchain)
 - [ ] Seção 11: Let's a Talk About LLM Applications In Production
 - [ ] Seção 12: Introduction To LangGraph
 - [ ] Seção 13: Useful tools when developing LLM Applications
-- [ ] Seção 14: [NEW] Bonus - get an AI Engineering Position
+- [ ] Seção 14: [NEW] MCP - Model Context Protocol
+- [ ] Seção 15: [NEW] Bonus - get an AI Engineering Position
