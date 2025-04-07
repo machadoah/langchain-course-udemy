@@ -4,7 +4,7 @@ from langchain_groq import ChatGroq
 from loguru import logger
 from pydantic import BaseModel, Field
 
-from information import INFORMATION as information
+from information import INFORMATION
 
 if __name__ == '__main__':
     load_dotenv()
@@ -36,6 +36,6 @@ if __name__ == '__main__':
 
     chain = summary_prompt_template | llm
 
-    res = chain.invoke(input={'information': information})
+    res = chain.invoke(input={'information': INFORMATION})
 
     print(res)
