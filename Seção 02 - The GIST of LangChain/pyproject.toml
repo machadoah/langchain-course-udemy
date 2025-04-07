@@ -9,5 +9,6 @@ dependencies = [
     "langchain-community>=0.3.20",
     "langchain-groq>=0.3.1",
     "langchainhub>=0.1.21",
+    "loguru>=0.7.3",
     "python-dotenv>=1.0.1",
 ]

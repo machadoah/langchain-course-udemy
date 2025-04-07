@@ -5,11 +5,13 @@ from pydantic import BaseModel, Field
 
 from information import INFORMATION as information
 
+from loguru import logger
+
 
 if __name__ == "__main__":
     load_dotenv()
 
-    print("Hello, LangChain! 🦜🔗")
+    logger.info("Hello, LangChain! 🦜🔗")
 
     class Output(BaseModel):
         resume: str = Field(description="A resposta contendo o pequeno resumo.")
